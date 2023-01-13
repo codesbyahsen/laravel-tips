@@ -1,11 +1,9 @@
-# laravel Clear Cache
+# Laravel Clear Cache
 Laravel Clear Cache Tips
 
 Clear Cache using callback route:
 
 ```php
-<?php
-
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/clear-cache', function () {
@@ -30,16 +28,12 @@ Route::get('/clear-cache', function () {
 Clear Cache using controller route:
 
 ```php
-<?php
+use App\Http\Controllers\HandleCache\CacheController;
 
 Route::get('/cache/{command}', [CacheController::class, 'cacheClear']);
 ```
 
 ```php
-<?php
-
-namespace App\Http\Controllers\HandleCache;
-
 use Illuminate\Support\Facades\Artisan;
 
 class CacheController extends Controller
